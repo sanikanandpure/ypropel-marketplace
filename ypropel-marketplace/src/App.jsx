@@ -1,11 +1,14 @@
 import './App.css'
-import Home from './components/Login'
+import { Routes, Route } from 'react-router-dom' 
+import Login from './components/Login'
+import Dashboard from './components/Dashboard'
 
 function App() {
   return (
-    <div className="appContainer">
-      <Home />
-    </div>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+    </Routes>
   )
 }
 
